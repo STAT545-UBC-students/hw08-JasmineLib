@@ -8,7 +8,7 @@ library(DT)
 bcl <- read.csv("bcl-data.csv", stringsAsFactors = FALSE)
 
 ui <- fluidPage(
-  theme = shinytheme("slate"),
+  theme = shinytheme("readable"),
   titlePanel("BC Liquor Store prices"),
   sidebarLayout(
     sidebarPanel(
@@ -29,12 +29,6 @@ ui <- fluidPage(
       tags$img(
         src = 'BCL_wine.png',
         align = "right",
-        height = 175,
-        width = 175
-      ),
-      tags$img(
-        src = 'BCL_logo.png',
-        align = "left",
         height = 175,
         width = 175
       ),
