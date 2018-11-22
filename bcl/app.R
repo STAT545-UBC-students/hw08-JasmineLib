@@ -73,8 +73,7 @@ ui <- fluidPage(
           width = 450)),
         tabPanel("Histogram Alcohol Content", plotOutput("coolplot")),
         tabPanel("Histogram Price", plotOutput("BCLPrices")),
-        tabPanel("Table Data", tableOutput("results")),
-      tabPanel("Table Data Sorted", dataTableOutput("results_sorted") )
+        tabPanel("Table Data Sorted", dataTableOutput("results_sorted") )
       ),
       br()
     ))
@@ -155,10 +154,6 @@ ui <- fluidPage(
         return( filtered() %>% 
                   arrange((Price)))
       }
-      filtered()
-    })
-    
-    output$results <- renderTable({
       filtered()
     })
     
